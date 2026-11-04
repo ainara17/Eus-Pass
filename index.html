@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header id="top-bar-container">
+
+        <form id="search-form" class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar eventos, municipios..." />
+            <button type="submit" id="search-btn" class="search-btn" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <form id="filter-form">
+            <label for="province-select"><i class="fa-solid fa-location-dot"></i></label>
+            <select name="province-select" id="province-select">
+                <option value="all">Todas las provincias</option>
+            </select>
+        </form>
+
+
+        </select>
+        <a href="src/html/favorites.html"><i class="fa-regular fa-heart"></i></a>
+        <div id="type-filters-container" class="type-filters-flex"></div>
+    </header>
+    <h1>Hola mundo</h1>
+
+
+    <section id="event-list"></section>
+    
+    
+    <div class="load-more-container" style="text-align: center; margin: 20px 0;">
+        <button id="load-more-btn" class="load-more-btn" style="display: none;">Cargar más</button>
+    </div>
+
+
+    <script type="module" src="./src/core/index.js"></script>
+</body>
+
+</html>

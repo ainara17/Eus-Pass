@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/"><i class="fa-solid fa-angle-left"></i></a></li>
+        </ul>
+    </nav>
+
+    <main class="event-detail-main">
+        <article class="event-detail-card">
+            <h1 id="detail-title">Cargando evento...</h1>
+
+            <div class="detail-img-container">
+                <img id="detail-img" src="" alt="">
+            </div>
+
+            <div class="event-info">
+                <p><strong>Fecha:</strong> <span id="detail-date"></span></p>
+                <p><strong>Lugar:</strong> <span id="detail-location"></span></p>
+                <p><strong>Tipo:</strong> <span id="detail-type"></span></p>
+            </div>
+
+            <div class="event-description">
+                <h2>Descripción</h2>
+                <p id="detail-description"></p>
+            </div>
+        </article>
+    </main>
+
+    <script type="module" src="../core/components/detail.js"></script>
+
+</body>
+
+</html>
