@@ -5,6 +5,14 @@ function renderEventCard(event, onFavorite = () => { }) {
    article.classList.add("event", "event-card");
    article.dataset.id = event.id;
 
+   article.addEventListener("click", (e) => {
+      if (e.target.closest("button")) return;
+
+      localStorage.setItem("selectedEvent", JSON.stringify(event));
+      window.location.href = `src/html/detail.html?id=${event.id}`;
+
+   });
+
    const eventTitle = document.createElement("h3");
    eventTitle.textContent = event.name;
    eventTitle.classList.add("event-name");
@@ -26,6 +34,8 @@ function renderEventCard(event, onFavorite = () => { }) {
 
    const favBtnCard = document.createElement("button");
    const icon = document.createElement("i");
+
+
 
 
 

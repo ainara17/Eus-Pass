@@ -3,13 +3,28 @@ import { API_URL } from "./services/api.js";
 class Event {
     constructor(eventData) {
         this.id = eventData.id;
-        this.name = eventData.nameEs;
+        this.name = this._cleanHtml(eventData.nameEs);
         this.imageUrl = this._extractImage(eventData);
         this.type = eventData.typeEs;
-        this.description = eventData.descriptionEs;
+        this.description = this._cleanHtml(eventData.descriptionEs);
         this.province = this._calculateProvince(eventData.provinceNoraCode);
         this.municipality = eventData.municipalityEs;
         this.startDate = this._cleanDate(eventData.startDate)
+    }
+
+
+    //limpiar etiquetas html de los textos
+    _cleanHtml(htmlString) {
+        if (!htmlString || typeof htmlString !== "string") return "";
+
+        // para limpiar los simbolos HTML 
+        let clean = htmlString.replace(/<[^>]*>?/gm, "");
+
+        // para limpiar las entidades HTML ( &iacute;, &eacute;, &ldquo;, &nbsp;)
+        const parser = new DOMParser();
+        const decoded = parser.parseFromString(clean, 'text/html').body.textContent;
+
+        return decoded ? decoded.trim() : "";
     }
 
 
@@ -81,6 +96,8 @@ async function getEventData(eventId) {
         return null;
     }
 };
+
+
 
 
 export {
