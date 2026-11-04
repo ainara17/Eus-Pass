@@ -14,6 +14,7 @@ async function initDetail() {
 
     renderEventDetail(event);
     
+    
 }
 
 function renderEventDetail(event){
@@ -41,6 +42,8 @@ function renderEventDetail(event){
         description.textContent = event.description || "Este evento no dispone de una descripción detallada.";
     }
 }
+
+
 
 
 
