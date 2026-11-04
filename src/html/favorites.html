@@ -8,13 +8,36 @@
    
 </head>
 <body>
-     <header>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/favorites.html">Favorites</a></li>
+                <li><a href="/"><i class="fa-solid fa-angle-left"></i></a></li>
             </ul>
         </nav>
+
+
+        
+    
+     <header id="top-bar-container">
+        <button id="clean-fav-btn" class="clean-fav-btn">Borrar favoritos</button>
+
+        <form id="search-form" class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar eventos, municipios..." />
+            <button type="submit" id="search-btn" class="search-btn" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <form id="filter-form">
+            <label for="province-select"><i class="fa-solid fa-location-dot"></i></label>
+            <select name="province-select" id="province-select">
+                <option value="all">Todas las provincias</option>
+            </select>
+            
+        </form>
+
+
+        </select>
+        <div id="type-filters-container" class="type-filters-flex"></div>
+
     </header>
   
     <section id="favorites-list"></section>

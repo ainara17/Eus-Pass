@@ -1,30 +1,72 @@
 import { getEvents } from "./Event.js";
 import { renderEventCard } from "./ui/renderer.js";
+import { setProvinceOptions, setTypeFilters, setSearch } from "./utils/filters.js";
 
-const limit = 10;
-let page = 7;
+let limit = 7; // eventos por pagina y btn cargar más
+let allEvents = [];
+let lastFilteredEvents = [];
 
-function getOffsetFromPage(page, limit) {
-    return (page - 1) * limit;
+
+
+// ========== Pintar tarjetas en la lista de eventos ======= //
+function displayEvents(eventsToRender) {
+    const eventListSection = document.getElementById("event-list");
+    if (!eventListSection) return;
+
+    lastFilteredEvents = eventsToRender;
+    
+    eventListSection.replaceChildren();
+    
+    lastFilteredEvents.slice(0, limit).forEach(eventObj => {
+        const card = renderEventCard(eventObj);
+        eventListSection.append(card);
+    });
+
+    if(loadMoreBtn){
+        if(limit < lastFilteredEvents.length){
+            loadMoreBtn.style.display = "block";
+        }else{
+            loadMoreBtn.style.display = "none";
+        }
+    }
 }
 
-async function loadPage(page, limit) {
+
+
+async function init() {
+         
     
-    const eventListSection = document.getElementById("event-list");
-    eventListSection.replaceChildren();
-
-
-    const events = await getEvents(page, limit);
-
-    if (!events || !events.items) {
+    const data = await getEvents(50, 1);
+    
+    if (!data || !data.items) {
         console.error("No se han podido cargar los eventos");
         return;
     }
 
-        events.items.forEach(eventObj => {
-        const card = renderEventCard(eventObj);
-        eventListSection.append(card);
-    });
-}
+    allEvents = data.items; 
+    
+    displayEvents(allEvents);
 
-loadPage(page, limit);
+        const handleFilterUpdate = (filteredEvents) => {
+            displayEvents(filteredEvents);
+    }
+        setProvinceOptions(allEvents, handleFilterUpdate);
+        setTypeFilters(allEvents, handleFilterUpdate);
+        setSearch(allEvents, handleFilterUpdate);
+    }
+
+
+// ========== Botón cargar más eventos ========== //
+
+const loadMoreBtn = document.getElementById("load-more-btn");
+    if(loadMoreBtn){
+        loadMoreBtn.addEventListener("click", () => {
+            limit += 7;
+            displayEvents(lastFilteredEvents);
+        });
+    }
+
+
+
+
+init();
