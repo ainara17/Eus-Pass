@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar eventos</title>
+
+    <link rel="stylesheet" href="../css/generalStyles.css">
+    <link rel="stylesheet" href="../css/exploreStyles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+
+</head>
+
+<body>
+ <!-- Bloqueo para pantallas que no sean mobile -->
+    <div id="desktop-blocker" class="desktop-blocker">
+        <div class="blocker-content">
+            <h2>Vista no disponible en escritorio</h2>
+            <p>Reduce el ancho de la ventana o accede desde tu móvil.</p>
+           
+        </div>
+    </div>
+
+     <!--  Menu -->
+    <header>
+        
+        <nav id="bottom-menu">
+            <ul>
+                <li class="nav-item ">
+
+
+
+                    <a class="nav-link " href="/">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="explore.html">
+                        <i class="fa-solid fa-compass"></i>
+                        <span>Explorar</span>
+
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="pass.html">
+                        <i class="fa-solid fa-passport"></i>
+                        <span>Pass</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <i class="fa-solid fa-user"></i>
+                    <a class="nav-link " href="profile.html">
+                        <span>Perfil</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <header id="top-bar-container">
+            <div class="head-explore">
+                <form id="filter-form">
+                    <label for="province-select"><i class="fa-solid fa-location-dot"></i></label>
+                    <select name="province-select" id="province-select">
+                        <option value="all">Todas las provincias</option>
+                    </select>
+                </form>
+                <a href="./favorites.html" id="favorites-link"><i class="fa-solid fa-heart"></i></a>
+                </select>
+            </div>
+
+            <form id="search-form" class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar eventos, municipios..." />
+                <button type="submit" id="search-btn" class="search-btn" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div id="type-filters-container" class="type-filters-flex"></div>
+        </header>
+
+
+        <section id="event-list"></section>
+
+
+        <div class="load-more-container" style="text-align: center; margin: 20px 0;">
+            <button id="load-more-btn" class="load-more-btn" style="display: none;">Cargar más</button>
+        </div>
+    </main>
+
+
+    <script type="module" src="../core/index.js"></script>
+</body>
+
+</html>

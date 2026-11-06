@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+
+    <link rel="stylesheet" href="../css/generalStyles.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+</head>
+
+<body class="profile-body">
+ <!-- Bloqueo para pantallas que no sean mobile -->
+    <div id="desktop-blocker" class="desktop-blocker">
+        <div class="blocker-content">
+            <h2>Vista no disponible en escritorio</h2>
+            <p>Reduce el ancho de la ventana o accede desde tu móvil.</p>
+           
+        </div>
+    </div>
+
+    
+    <!--  Menu -->
+
+    <nav id="bottom-menu">
+        <ul>
+            <li class="nav-item ">
+
+                <a class="nav-link " href="/">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="explore.html">
+                    <i class="fa-solid fa-compass"></i>
+                    <span>Explorar</span>
+
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="pass.html">
+                    <i class="fa-solid fa-passport"></i>
+                    <span>Pass</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <i class="fa-solid fa-user"></i>
+                <a class="nav-link active" href="">
+                    <span>Perfil</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <!-------------- Info del usuario -------------->
+      <div class="mobile-container">
+  
+          <section class="user-info-card">
+              <div class="user-avatar">
+                  <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="user-details">
+                  <h3>Exploradora cultural</h3>
+                  <p>usuario@euskadikultura.eus</p>
+              </div>
+          </section>
+  
+          <section class="profile-stats">
+              <div class="stat-box">
+                  <span class="stat-number">3</span>
+                  <span class="stat-label">Sellos</span>
+              </div>
+              <div class="stat-box">
+                  <span class="stat-number">2</span>
+                  <span class="stat-label">Cupones</span>
+              </div>
+              <div class="stat-box">
+                  <span class="stat-number">5</span>
+                  <span class="stat-label">Favoritos</span>
+              </div>
+          </section>
+  
+  
+  
+          <!-------------- Botenes de ajustes y preferencias-------------->
+          <nav class="profile-menu">
+              <a href="#" class="menu-item">
+                  <i class="fa-solid fa-pen"></i>
+                  <span>Personalización</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <a href="#" class="menu-item">
+                  <i class="fa-solid fa-bell"></i>
+                  <span>Notificaciones</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <a href="#" class="menu-item">
+                  <i class="fa-solid fa-circle-question"></i>
+                  <span>Ayuda y Soporte</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <a href="#" class="menu-item text-danger">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <span>Cerrar Sesión</span>
+              </a>
+          </nav>
+  
+      </div>
+<main>
+
+
+</main>
+
+</body>
+
+</html>

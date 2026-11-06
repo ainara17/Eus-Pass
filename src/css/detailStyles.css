@@ -1,0 +1,70 @@
+.back-arrow {
+    position: absolute;
+    padding: 4px 12px 4px 12px;
+    font-size: 24px;
+    margin: 8px;
+    background-color: var(--color-honey-clay);
+    border-radius: 100%;
+    text-decoration: none;
+    cursor: pointer;
+
+    a {
+        color: var(--bg-primary);
+
+    }
+
+}
+
+.event-detail-main {
+    width: 100%;
+    overflow: hidden;
+}
+
+#detail-card-info {
+    margin: 8px;
+    width: 100%;
+}
+
+#detail-type {
+    display: inline-block;
+    padding: 2px 4px 2px 4px;
+    background-color: var(--color-honey-clay);
+    border: 1px solid var(--color-canyon);
+    border-radius: 30px;
+    font-size: 12px;
+
+
+
+}
+
+
+.event-info p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+
+    i {
+        color: var(--color-honey-clay);
+    }
+}
+
+
+.event-description {
+    margin-top: 16px;
+}
+
+.btn-external-link {
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--accent-primary);
+    color: var(--color-pearl, #FBF8F5);
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

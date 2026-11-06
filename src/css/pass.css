@@ -1,0 +1,223 @@
+.mobile-container {
+    width: 100%;
+    max-width: 480px;
+    background-color: var(--color-pearl);
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    position: relative;
+}
+
+
+.passport-header h1 {
+    font-size: 1.4rem;
+    color: var(--color-first-date);
+    margin: 0 0 0.25rem 0;
+}
+
+.passport-header p {
+    font-size: 0.85rem;
+    color: var(--color-honey-clay);
+    margin: 0;
+}
+
+
+.btn-qr-scan {
+    width: 100%;
+    background-color: var(--color-sienna);
+    color: var(--color-pearl);
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Toggle */
+.passport-tabs {
+    display: flex;
+    background-color: var(--color-antique-linen);
+    border: 1px solid var(--border-color);
+    padding: 8px;
+}
+
+.tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    font-weight: 600;
+    color: var(--color-honey-clay);
+    cursor: pointer;
+
+}
+
+.tab-btn.active {
+    background-color: var(--color-pearl);
+    color: var(--color-canyon);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+.passport-content-section {
+    display: none;
+}
+
+.passport-content-section.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+
+.stamps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+    border: 1px solid var(--border-color);
+
+    justify-items: center;
+
+    background-color: var(--bg-secondary);
+
+}
+
+
+.rewards-list {
+    margin-top: 16px;
+}
+
+
+.reward-card {
+    background-color: var(--color-antique-linen);
+    border: 1px solid var(--border-color);
+
+    border-radius: 6px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(67, 32, 6, 0.04);
+}
+
+
+
+
+.reward-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    h3 {
+        margin: 0;
+        font-size: 0.95rem;
+        color: var(--color-first-date);
+        font-weight: 700;
+
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.8rem;
+        color: var(--color-honey-clay);
+
+    }
+}
+
+
+.badge-claimed {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    background-color: var(--color-evergreen);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    width: fit-content;
+    margin-top: 0.4rem;
+}
+
+
+
+/* Modal QR */
+.qr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.qr-modal-content {
+    background: var(--color-pearl);
+    width: 100%;
+    max-width: 360px;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.camera-preview-box {
+    width: 100%;
+    height: 300px;
+    color: var(--color-sandstone);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    text-align: center;
+
+    box-sizing: border-box;
+    font-size: 0.9rem;
+
+    img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.camera-preview-box i {
+    font-size: 2.5rem;
+}
+
+.btn-demo-scan {
+    width: 100%;
+    background-color: var(--color-evergreen);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pasaporte</title>
+
+    <link rel="stylesheet" href="../css/generalStyles.css">
+    <link rel="stylesheet" href="../css/pass.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    
+</head>
+
+<body class="passport-body">
+     <!-- Bloqueo para pantallas que no sean mobile -->
+    <div id="desktop-blocker" class="desktop-blocker">
+        <div class="blocker-content">
+            <h2>Vista no disponible en escritorio</h2>
+            <p>Reduce el ancho de la ventana o accede desde tu móvil.</p>
+           
+        </div>
+    </div>
+
+    <nav id="bottom-menu">
+        <ul>
+            <li class="nav-item ">
+
+
+
+                <a class="nav-link " href="/">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="explore.html">
+                    <i class="fa-solid fa-compass"></i>
+                    <span>Explorar</span>
+
+                </a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link active" href="pass.html">
+                    <i class="fa-solid fa-passport"></i>
+                    <span>Pass</span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <i class="fa-solid fa-user"></i>
+                <a class="nav-link " href="profile.html">
+                    <span>Perfil</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+   
+    <div class="mobile-container">
+
+
+        <header class="passport-header">
+            <h1>Pasaporte Cultural</h1>
+            <p>Colecciona sellos asistiendo a eventos</p>
+        </header>
+
+        <!-- Botón QR  -->
+        <section class="qr-action-section">
+            <button id="open-qr-btn" class="btn-qr-scan">
+                <i class="fa-solid fa-qrcode"></i> Escanear QR
+            </button>
+        </section>
+
+        <!-- Toggle para Sellos y Recompensas -->
+        <nav class="passport-tabs" aria-label="Navegación del pasaporte">
+            <button class="tab-btn active" data-target="stamps-section">Sellos</button>
+            <button class="tab-btn" data-target="rewards-section">Recompensas</button>
+        </nav>
+
+        <!--  Lista de sellos -->
+        <section id="stamps-section" class="passport-content-section active">
+            <div class="stamps-grid">
+
+
+                <div class="stamp-card unlocked">
+                    <div class="stamp-circle">
+                        <img src="../assets/sello1" alt="">
+                    </div>
+                </div>
+
+                <div class="stamp-card unlocked">
+                    <div class="stamp-circle">
+                        <img src="../assets/sello2" alt="">
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Lista de recompensas -->
+        <section id="rewards-section" class="passport-content-section">
+            <div class="rewards-list">
+
+                <div class="reward-card claimed">
+                    <div class="reward-info">
+                        <h3>2 entradas gratis para el Museo de Bellas artes</h3>
+                        <p>Desbloqueado con el sello de Bilbao</p>
+                        <span class="badge-claimed">Canjeado</span>
+                    </div>
+                    <div class="reward-icon" style="font-size: 1.5rem; color: var(--color-sienna);">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+    </div>
+
+
+    <!-- Modal para simulación de cámara QR -->
+    <div id="qr-modal" class="qr-modal" style="display: none;">
+        <div class="qr-modal-content">
+            <button id="close-qr-modal" class="close-btn">&times;</button>
+
+            <div class="camera-preview-box">
+
+                <img src="https://us1.discourse-cdn.com/fedoraproject/original/3X/d/a/daf4bd5cf43d383496b946e43c61b6c8a52c0dee.png"
+                    alt="camara no encontrada">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../core/components/pass.js"></script>
+</body>
+
+</html>
