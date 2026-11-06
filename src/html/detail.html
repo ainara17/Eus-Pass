@@ -4,39 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ficha del evento</title>
+    <link rel="stylesheet" href="../css/generalStyles.css">
+    <link rel="stylesheet" href="../css/detailStyles.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
 
 
 </head>
 
 <body>
+
+     <!-- Bloqueo para pantallas que no sean mobile -->
+    <div id="desktop-blocker" class="desktop-blocker">
+        <div class="blocker-content">
+            <h2>Vista no disponible en escritorio</h2>
+            <p>Reduce el ancho de la ventana o accede desde tu móvil.</p>
+           
+        </div>
+    </div> 
+     <!--  MEnu -->
     <nav>
         <ul>
-            <li><a href="/"><i class="fa-solid fa-angle-left"></i></a></li>
+            <li class="back-arrow"><a href="explore.html"><i class="fa-solid fa-angle-left"></i></a></li>
         </ul>
     </nav>
 
     <main class="event-detail-main">
         <article class="event-detail-card">
-            <h1 id="detail-title">Cargando evento...</h1>
 
             <div class="detail-img-container">
                 <img id="detail-img" src="" alt="">
             </div>
+            <section id="detail-card-info">
+                <p id="detail-type"></p>
+                <h1 id="detail-title">Cargando evento...</h1>
 
-            <div class="event-info">
-                <p><strong>Fecha:</strong> <span id="detail-date"></span></p>
-                <p><strong>Lugar:</strong> <span id="detail-location"></span></p>
-                <p><strong>Tipo:</strong> <span id="detail-type"></span></p>
-            </div>
+                <div class="event-info">
+                    <p><i class="fa-solid fa-calendar"></i> <span id="detail-date"></span></p>
+                    <p><i class="fa-solid fa-location-dot"></i><span id="detail-location"></span>
+                    </p>
+                </div>
 
-            <div class="event-description">
-                <h2>Descripción</h2>
-                <p id="detail-description"></p>
-            </div>
+                <div class="event-description">
+                    <h2>Descripción</h2>
+                    <p id="detail-description"></p>
+                </div>
+                <!-- Botón de enlace externo -->
+                <a id="detail-external-link" href="#" target="_blank" rel="noopener noreferrer"
+                    class="btn-external-link" style="display: none;">
+                    <span>Ver sitio web oficial</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </section>
         </article>
     </main>
+
 
     <script type="module" src="../core/components/detail.js"></script>
 

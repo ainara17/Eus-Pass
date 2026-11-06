@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <!-- Fondo con efecto cuño de tinta (terracota / sienna) -->
+  <circle cx="32" cy="32" r="29" fill="#7C2807" opacity="0.92" stroke="#432006" stroke-width="1.5" stroke-dasharray="8 1 4 1" />
+  <circle cx="32" cy="32" r="25" fill="none" stroke="#FBF8F5" stroke-width="1" opacity="0.6" stroke-dasharray="3 2" />
+
+  <!-- Lauburu vectorial entintado en tono pergamino (#FBF8F5) -->
+  <g fill="#FBF8F5" opacity="0.95" transform="translate(32, 32) scale(0.85)">
+    <!-- Brazo 1 (Arriba) -->
+    <path d="M 0,0 A 6,6 0 0,1 0,-12 A 6,6 0 0,0 0,-24 A 12,12 0 0,0 -12,-12 A 12,12 0 0,0 0,0 Z" />
+    <!-- Brazo 2 (Derecha) -->
+    <path d="M 0,0 A 6,6 0 0,1 12,0 A 6,6 0 0,0 24,0 A 12,12 0 0,0 12,-12 A 12,12 0 0,0 0,0 Z" />
+    <!-- Brazo 3 (Abajo) -->
+    <path d="M 0,0 A 6,6 0 0,1 0,12 A 6,6 0 0,0 0,24 A 12,12 0 0,0 12,12 A 12,12 0 0,0 0,0 Z" />
+    <!-- Brazo 4 (Izquierda) -->
+    <path d="M 0,0 A 6,6 0 0,1 -12,0 A 6,6 0 0,0 -24,0 A 12,12 0 0,0 -12,12 A 12,12 0 0,0 0,0 Z" />
+  </g>
+</svg>

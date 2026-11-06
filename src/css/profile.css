@@ -1,0 +1,134 @@
+.profile-header {
+    margin-top: 16px;
+    padding: 8px;
+}
+
+.profile-header h1 {
+    font-size: 1.4rem;
+    color: var(--color-first-date, #343224);
+    margin: 0 0 0.25rem 0;
+}
+
+.profile-header p {
+    font-size: 0.85rem;
+    color: var(--color-honey-clay, #9F6352);
+    margin: 0;
+}
+
+/* Tarjeta de Usuario */
+.user-info-card {
+    background-color: var(--color-antique-linen, #F2ECE9);
+    border: 1px solid var(--color-sandstone, #D4B892);
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-sienna, #7C2807);
+    color: var(--color-pearl, #FBF8F5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+
+}
+
+.user-details h3 {
+    margin: 0 0 0.2rem 0;
+    font-size: 1rem;
+    color: var(--color-first-date, #343224);
+}
+
+.user-details p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--color-honey-clay, #9F6352);
+}
+
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin: 8px;
+}
+
+.stat-box {
+    background-color: var(--color-antique-linen, #F2ECE9);
+    border: 1px solid var(--color-sandstone, #D4B892);
+    padding: 0.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 16px;
+}
+
+.stat-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-canyon, #432006);
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-honey-clay, #9F6352);
+    letter-spacing: 0.5px;
+}
+
+/* Menú de Opciones */
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 8px;
+}
+
+.menu-item {
+    background-color: var(--color-antique-linen, #F2ECE9);
+    border: 1px solid var(--color-sandstone, #D4B892);
+
+    padding: 0.9rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--color-first-date, #343224);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+}
+
+
+
+.menu-item i:first-child {
+    color: var(--color-sienna, #7C2807);
+    width: 20px;
+    text-align: center;
+}
+
+.menu-item span {
+    flex-grow: 1;
+    margin-left: 0.75rem;
+}
+
+.menu-item i:last-child {
+    font-size: 0.8rem;
+    color: var(--color-honey-clay, #9F6352);
+}
+
+.menu-item.text-danger {
+    color: #A93226;
+}
+
+.menu-item.text-danger i {
+    color: #A93226;
+}

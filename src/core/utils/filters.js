@@ -90,7 +90,7 @@ function setTypeFilters(events, onFilterChange) {
 
 // ============ Filtro de barra de búsqueda ================ //
 function setSearch(events, onFilterChange) {
-    const searchForm = document.getElementById("search-form"); // Capturamos el <form> del HTML
+    const searchForm = document.getElementById("search-form"); 
     const searchInput = document.getElementById("search-input");
     if (!searchInput) return;
 
@@ -101,7 +101,7 @@ function setSearch(events, onFilterChange) {
 
     if (searchForm) {
         searchForm.addEventListener("submit", (e) => {
-            e.preventDefault(); // <--- ¡Aquí está el preventDefault para que no recargue!
+            e.preventDefault(); 
             searchQuery = searchInput.value;
             applyFilters(events, onFilterChange);
         });

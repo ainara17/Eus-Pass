@@ -23,6 +23,7 @@ function renderEventDetail(event){
     const date = document.getElementById("detail-date");
     const location = document.getElementById("detail-location");
     const description = document.getElementById("detail-description");
+    const url = document.getElementById("detail-external-link");
 
 
     if (title) title.textContent = event.name;
@@ -40,7 +41,17 @@ function renderEventDetail(event){
     if (description) {
         description.textContent = event.description || "Este evento no dispone de una descripción detallada.";
     }
+ if (url) {
+        if (event.source) {
+            url.href = event.source;
+            url.style.display = "inline-flex"; 
+        } else {
+            url.style.display = "none"; 
+        }
+    }
 }
+
+
 
 
 

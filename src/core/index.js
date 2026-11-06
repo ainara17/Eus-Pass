@@ -2,7 +2,7 @@ import { getEvents } from "./Event.js";
 import { renderEventCard } from "./ui/renderer.js";
 import { setProvinceOptions, setTypeFilters, setSearch } from "./utils/filters.js";
 
-let limit = 7; // eventos por pagina y btn cargar más
+let limit = 5; // eventos por pagina y btn cargar más
 let allEvents = [];
 let lastFilteredEvents = [];
 
@@ -65,6 +65,7 @@ const loadMoreBtn = document.getElementById("load-more-btn");
             displayEvents(lastFilteredEvents);
         });
     }
+
 
 
 

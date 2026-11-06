@@ -9,7 +9,7 @@ function renderEventCard(event, onFavorite = () => { }) {
       if (e.target.closest("button")) return;
 
       localStorage.setItem("selectedEvent", JSON.stringify(event));
-      window.location.href = `src/html/detail.html?id=${event.id}`;
+      window.location.href = `detail.html?id=${event.id}`;
 
    });
 
@@ -17,28 +17,40 @@ function renderEventCard(event, onFavorite = () => { }) {
    eventTitle.textContent = event.name;
    eventTitle.classList.add("event-name");
 
+   const imgContainer = document.createElement("div");
+   imgContainer.classList.add("img-container");
+   
    const eventImage = document.createElement("img");
    eventImage.setAttribute("src", event.imageUrl);
    eventImage.setAttribute("alt", event.name);
 
+
+   
+   
+   const textContainer = document.createElement("div");
+   textContainer.classList.add("text-container");
+   
    const category = document.createElement("p");
+   category.classList.add("card-category")
    category.textContent = event.type;
+  
+   
+   const metaData = document.createElement("div")
+   metaData.classList.add("card-meta-container")
 
    const location = document.createElement("p");
    location.classList.add("location")
    location.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${event.municipality}`;
-
+   
    const date = document.createElement("p");
    date.classList.add("date")
    date.innerHTML = `<i class="fa-solid fa-calendar"></i> ${event.startDate}`;
-
+   
    const favBtnCard = document.createElement("button");
    const icon = document.createElement("i");
-
-
-
-
-
+   
+   
+   
    // =========== Favoritos ========== //
    const favoriteStatus = isInFavorites(event);
    if (favoriteStatus) {
@@ -47,24 +59,38 @@ function renderEventCard(event, onFavorite = () => { }) {
    } else {
       icon.className = "fa-regular fa-heart";
    }
-
+   
    favBtnCard.addEventListener("click", () => {
       const isFavorite = toggleFavorite(event);
       if (isFavorite) {
          favBtnCard.classList.add("favorite");
          icon.className = "fa-solid fa-heart";
          onFavorite(event, true);
-
+         
       } else {
          favBtnCard.classList.remove("favorite");
          icon.className = "fa-regular fa-heart";
          onFavorite(event, false);
       }
    })
-
+   
+   
    favBtnCard.append(icon);
+   imgContainer.appendChild(eventImage)
+   imgContainer.appendChild(favBtnCard)
 
-   article.append(eventTitle, eventImage, category, location, date, favBtnCard);
+   textContainer.appendChild(category)
+   textContainer.appendChild(eventTitle)
+   textContainer.appendChild(metaData)
+
+   metaData.appendChild(location)
+   metaData.appendChild(date)
+
+
+
+
+
+   article.append(imgContainer, textContainer, );
    return article;
 }
 

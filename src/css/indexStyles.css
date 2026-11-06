@@ -1,0 +1,104 @@
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 8px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.welcome-container {
+    width: 70%;
+}
+
+.welcome-container h1 {
+    font-size: 2rem;
+
+}
+
+.welcome-container p {
+    font-size: 0.85rem;
+    color: var(--color-honey-clay);
+    margin: 0;
+}
+
+.btn-notification {
+    background-color: var(--color-antique-linen);
+    border: 1px solid var(--color-sandstone);
+    color: var(--color-canyon);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+
+}
+
+.btn-notification:hover {
+    background-color: var(--color-sandstone);
+}
+
+/* Tarjeta de Misión en Curso */
+.mission-card {
+    background-color: var(--color-antique-linen);
+    border: 1px solid var(--color-sandstone);
+
+    padding: 8px;
+    margin: 8px;
+
+    margin-bottom: 1.3rem;
+}
+
+.mission-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.mission-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: var(--accent-secondary);
+    color: var(--bg-primary);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+.mission-title {
+    font-size: 1rem;
+    color: var(--color-first-date);
+    margin: 0 0 0.75rem 0;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: var(--color-sandstone);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: var(--accent-secondary);
+    transition: width 0.4s ease;
+}
+
+.mission-hint {
+    font-size: 0.75rem;
+    color: var(--color-honey-clay);
+    margin: 0;
+}
+
+h2 {
+    font-size: 18px;
+    padding: 8px 8px 4px 8px;
+}

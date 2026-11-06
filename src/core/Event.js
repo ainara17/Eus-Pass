@@ -9,7 +9,8 @@ class Event {
         this.description = this._cleanHtml(eventData.descriptionEs);
         this.province = this._calculateProvince(eventData.provinceNoraCode);
         this.municipality = eventData.municipalityEs;
-        this.startDate = this._cleanDate(eventData.startDate)
+        this.startDate = this._cleanDate(eventData.startDate);
+        this.source = eventData.sourceUrlEs;
     }
 
 
